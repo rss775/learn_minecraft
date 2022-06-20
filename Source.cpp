@@ -54,8 +54,8 @@ int main() {
      */
 
     // Optimal for standard monitors:
-    //game.create(1280, 720);
-    game.create(1920, 1080);
+    game.create(1280, 720);
+    //game.create(1920, 1080);
 
     // Optimal for MacBook Pro 16 display:
     //game.create(2048, 1152);

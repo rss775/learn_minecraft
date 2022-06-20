@@ -4,8 +4,12 @@
 
 #include "Cube.h"
 
-Cube::Cube(const ObjectNameTag& name, const Vec3D &pos, Cube::Type t) : RigidBody(ObjectNameTag(name)), type(t){
+Cube::Cube(const ObjectNameTag& name, const Vec3D &pos, Cube::Type t) : 
+RigidBody(Mesh::Cube(name, MinecraftConsts::WORLD_SCALE)), type(t){
     // TODO: implement (lesson 1)
+    setColor(Cube::cubeColor(t));
+    translate(pos*MinecraftConsts::WORLD_SCALE);
+    setCollider(true);
 }
 
 sf::Color Cube::cubeColor(Cube::Type t) {

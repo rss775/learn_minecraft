@@ -19,6 +19,7 @@ public:
     explicit Map(std::shared_ptr<World> world): world(std::move(world)) {}
 
     void addCube(const Vec3D& pos, Cube::Type t);
+    void addCubeSilent(const Vec3D& pos, Cube::Type t);
     void removeCube(const Vec3D& pos);
 
     void loadMap(const std::string& mapName);
